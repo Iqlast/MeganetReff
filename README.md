@@ -5,6 +5,10 @@ AUTO REFFERAL FOR https://meganet.app/login?refcode=0BU2AA
 install depencies
 
     npm i
+or 
+
+    npm install axios chalk@4 ethers socks-proxy-agent readline fs
+
 Run bot 
 
     node run.js
