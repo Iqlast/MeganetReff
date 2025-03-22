@@ -1,5 +1,7 @@
 AUTO REFFERAL FOR https://meganet.app/login?refcode=0BU2AA
 
+    git clone https://github.com/Iqlast/MeganetReff.git
+
 install depencies
 
     npm i
