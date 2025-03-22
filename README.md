@@ -20,6 +20,12 @@ if you wan use proxy drop in proxy.txt
     protocol://ip:port
 ADD AUTO TASK , INPUT YOUR ID TO id.txt
 
+RUN AUTO TASK 
+
+    node megatask.js
+
+searce your id from :
+
 ![image](https://github.com/user-attachments/assets/9873ce0c-4a84-4cde-be4c-e97d8b593d99)
 
 
