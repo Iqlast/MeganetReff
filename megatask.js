@@ -58,17 +58,17 @@ async function sendPatchRequest(task) {
             console.log(chalk.red.bold(`Task ${task}: Error - ${error.message}. Retrying... (Attempt ${attempt})`));
         }
         attempt++;
-        await new Promise(resolve => setTimeout(resolve, 5000)); // Tunggu 3 detik sebelum mencoba lagi
+        await new Promise(resolve => setTimeout(resolve, 5000)); // Tunggu 5 detik sebelum mencoba lagi
     }
 }
 
-// Function to loop oneThousandRef task
-async function loopOneThousandRef() {
-    console.log(chalk.blue.bold("Memulai Suntik 1M XP..."));
+// Function to loop oneHundredNode task
+async function oneHundredNode() {
+    console.log(chalk.blue.bold("Memulai Suntik 10M XP..."));
     let counter = 1;
     while (true) {
         console.log(chalk.cyan(`\nSuntik ke-${counter}`));
-        await sendPatchRequest("oneThousandRef");
+        await sendPatchRequest("oneHundredNode");
         await new Promise(resolve => setTimeout(resolve, 5000)); // Interval 3 detik
         counter++;
     }
@@ -82,7 +82,7 @@ async function handleUserChoice(choice) {
             await new Promise(resolve => setTimeout(resolve, 5000)); // Interval 5 detik antar task
         }
     } else if (choice === "2") {
-        await loopOneThousandRef(); // Loop berulang untuk Suntik 1M XP
+        await oneHundredNode(); // Loop berulang untuk Suntik 10M XP
     } else {
         console.log(chalk.red.bold("Pilihan tidak valid. Silakan pilih 1 atau 2."));
     }
@@ -99,7 +99,7 @@ console.log(chalk.blue.bold("      Meganet Task Automation       "));
 console.log(chalk.blue.bold("===================================="));
 console.log(chalk.cyan("Pilih opsi:"));
 console.log(chalk.cyan("1. Complete all tasks"));
-console.log(chalk.cyan("2. Suntik 1M XP"));
+console.log(chalk.cyan("2. Suntik 10M XP"));
 
 rl.question("Masukkan pilihan (1/2): ", (choice) => {
     handleUserChoice(choice).then(() => {
