@@ -58,7 +58,7 @@ async function sendPatchRequest(task) {
             console.log(chalk.red.bold(`Task ${task}: Error - ${error.message}. Retrying... (Attempt ${attempt})`));
         }
         attempt++;
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Tunggu 3 detik sebelum mencoba lagi
+        await new Promise(resolve => setTimeout(resolve, 5000)); // Tunggu 3 detik sebelum mencoba lagi
     }
 }
 
@@ -69,7 +69,7 @@ async function loopOneThousandRef() {
     while (true) {
         console.log(chalk.cyan(`\nSuntik ke-${counter}`));
         await sendPatchRequest("oneThousandRef");
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Interval 3 detik
+        await new Promise(resolve => setTimeout(resolve, 5000)); // Interval 3 detik
         counter++;
     }
 }
