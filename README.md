@@ -10,7 +10,7 @@ or
 
     npm install axios chalk@4 ethers socks-proxy-agent readline fs
 
-Run bot 
+Run bot for refferal
 
     node run.js
 
